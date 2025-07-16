@@ -1,0 +1,88 @@
+/* Background animation */
+/* Sunset Gradient Background with Animation */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(-45deg, #ff6a00, #ee0979, #ff6a00);
+  background-size: 400% 400%;
+  animation: backgroundShift 10s ease infinite;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center the register form */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Form container similar to homepage hero */
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-container span {
+  color: #6a11cb;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.register-form input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.register-form input:focus {
+  border-color: #6a11cb;
+}
+
+.register-form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6a11cb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #4b0dbf;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+}

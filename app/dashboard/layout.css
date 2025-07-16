@@ -1,0 +1,44 @@
+/* app/dashboard/layout.css */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+  color: #1a1a1a;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* 🌙 Dark mode overrides using Tailwind's dark class */
+.dark .dashboard-layout {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-layout .sidebar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .dark .dashboard-layout .sidebar {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  .dashboard-main {
+    padding: 1rem;
+  }
+}

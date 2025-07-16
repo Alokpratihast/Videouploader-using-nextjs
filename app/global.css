@@ -1,0 +1,12 @@
+/* layout styles */
+.dashboard-layout {
+  display: flex;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  margin-left: 16rem; /* same as sidebar width */
+  padding: 2.5rem;
+  width: 100%;
+}

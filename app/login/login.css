@@ -1,0 +1,108 @@
+/* ===============================
+   🌈 Global & Background Styles
+   =============================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(-45deg, #ff6a00, #ee0979, #ff6a00);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   🧩 Layout Container
+   =============================== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ===============================
+   🧱 Login Box Styling
+   =============================== */
+.login-box {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  transform: scale(1.01);
+}
+
+.login-box h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.login-box span {
+  color: #ee0979;
+}
+
+/* ===============================
+   ✍️ Login Form Styling
+   =============================== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.login-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #ee0979;
+  box-shadow: 0 0 5px rgba(238, 9, 121, 0.3);
+}
+
+.login-form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ee0979;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #c00563;
+}
+
+/* ===============================
+   ❌ Error Message
+   =============================== */
+.error-text {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
